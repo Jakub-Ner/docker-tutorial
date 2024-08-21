@@ -6,3 +6,8 @@
 - Prerender - Node.js
 
 
+tail -f /dev/null
+
+apk add curl
+
+https://bash-prompt-generator.org/

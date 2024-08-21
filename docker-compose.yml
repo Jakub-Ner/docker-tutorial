@@ -1,0 +1,22 @@
+services:
+  frontend:
+    container_name: frontend
+    image: jakubner02/docker-tutorial:frontend
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    env_file:
+      - ./frontend/.env
+
+  backend:
+    container_name: backend
+    image:  openjdk:17-jdk-alpine
+    ports:
+      - "8080:8080"
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    command: "./gradlew bootRun"
+    env_file:
+      - ./backend/.env
+
