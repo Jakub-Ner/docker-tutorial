@@ -1,8 +1,6 @@
 ## Docker Tutorial
 
-
-- Backend - Spring Boot
-- Frontend - ReactJS
-- Prerender - Node.js
+Backend - Java Spring Boot
+Frontend - Next.js + React
 
 
