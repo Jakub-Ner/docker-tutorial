@@ -1,7 +1,7 @@
 'use server'
 
 export default async function Home() {
-  const response = await fetch("http://localhost:8080/api", {cache: "no-store"})
+  const response = await fetch("http://backend:8080/api", {cache: "no-store"})
   .then((res) => res.json()).then(({data}) => data)
   .catch((err) => "Could not retrieve data");
 

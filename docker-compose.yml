@@ -1,5 +1,8 @@
+version: '3.8'
 services:
   frontend:
+    deploy:
+      replicas: 3
     container_name: frontend
     image: jakubner02/docker-tutorial:frontend
     ports:
@@ -8,7 +11,10 @@ services:
     env_file:
       - ./frontend/.env
 
+
   backend:
+    deploy:
+      replicas: 2
     container_name: backend
     image:  openjdk:17-jdk-alpine
     ports:
